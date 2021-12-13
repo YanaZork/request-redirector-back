@@ -24,8 +24,8 @@ class Server {
     }
 
     private routerConfig() {
-        this.app.use('/batabase', DataRouter);
-//        this.app.use('/award', AwardRouter);
+        this.app.use('/database', DataRouter);
+ //       this.app.use('/settings', /*AwardRouter*/);
   //      this.app.use('/player', PlayerRouter);
     //    this.app.use('/pictures/:filename', new PicturesController().get)
     }

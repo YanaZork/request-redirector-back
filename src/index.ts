@@ -1,3 +1,4 @@
+/*
 import express, { Request, Response, Application } from 'express';
 import server from './server';
 
@@ -11,12 +12,12 @@ app.get("/", (req: Request, res: Response): void => {
 app.listen(PORT, (): void => {
     console.log(`👉 https://localhost:${PORT}`);
 });
+*/
 
-/*
 import server from './server';
 require('dotenv').config();
 
-const port = parseInt(process.env.PORT || '4000');
+const port = parseInt(process.env.PORT || '5000');
 
 const app = new server().start(port)
   .then(port => console.log(`Running on port ${port}`))
@@ -25,4 +26,3 @@ const app = new server().start(port)
   });
 
 export default app;
-*/
