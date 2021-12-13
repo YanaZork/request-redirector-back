@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import DataRouter from './routers/DataRouter';
+import GetDevicesRouter from './routers/GetDevicesRouter';
 //import AwardRouter from './routers/AwardRouter';
 //import PlayerRouter from './routers/PlayerRouter';
 //import cors from 'cors';
@@ -25,6 +26,7 @@ class Server {
 
     private routerConfig() {
         this.app.use('/database', DataRouter);
+        this.app.use('/getdevices', GetDevicesRouter);
  //       this.app.use('/settings', /*AwardRouter*/);
   //      this.app.use('/player', PlayerRouter);
     //    this.app.use('/pictures/:filename', new PicturesController().get)
