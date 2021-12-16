@@ -1,11 +1,6 @@
 import express from 'express';
-import bodyParser from 'body-parser';
-import DataRouter from './routers/DataRouter';
 import GetDevicesRouter from './routers/GetDevicesRouter';
-//import AwardRouter from './routers/AwardRouter';
-//import PlayerRouter from './routers/PlayerRouter';
-//import cors from 'cors';
-//import PicturesController from './controllers/PicturesController';
+import cors from 'cors';
 
 class Server {
     private app;
@@ -18,18 +13,14 @@ class Server {
 
     private config() {
         this.app.use(express.json());
- /*       this.app.use(cors({
+        this.app.use(cors({
             origin: "*"
         }));
-*/
+
     }
 
     private routerConfig() {
-        this.app.use('/database', DataRouter);
         this.app.use('/getdevices', GetDevicesRouter);
- //       this.app.use('/settings', /*AwardRouter*/);
-  //      this.app.use('/player', PlayerRouter);
-    //    this.app.use('/pictures/:filename', new PicturesController().get)
     }
 
     public start = (port: number) => {
